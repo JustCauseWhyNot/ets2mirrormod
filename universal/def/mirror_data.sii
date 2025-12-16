@@ -1,0 +1,27 @@
+SiiNunit
+{
+mirror_data : .mirror.data {
+
+	# sizes of mirrors in meters (width, height) - Based on real truck specifications
+
+	mirror_size[]:		(0.178, 0.406)	// close mirror
+	mirror_size[]:		(0.2, 0.2)		// close small mirror
+	mirror_size[]:		(0.178, 0.406)	// far mirror
+	mirror_size[]:		(0.2, 0.2)		// far small mirror
+	mirror_size[]:		(0.3, 0.15)		// side mirror
+	mirror_size[]:		(0.2, 0.2)		// front mirror
+	mirror_size[]:		(0.2, 0.2)		// front2 mirror
+
+	# angles in degrees that control mirror's FOV (left, right, bottom, top)
+	# Realistic values based on actual truck mirror behavior
+
+	mirror_fov_extension[]:	(4.4, 4.4, 10.0, 10.0)		// close mirror
+	mirror_fov_extension[]:	(20.0, 20.0, 20.0, 20.0)	// close small mirror
+	mirror_fov_extension[]:	(4.4, 4.4, 10.0, 10.0)		// far mirror
+	mirror_fov_extension[]:	(20.0, 20.0, 20.0, 20.0)	// far small mirror
+	mirror_fov_extension[]:	(10.0, 10.0, 10.0, 10.0)	// side mirror
+	mirror_fov_extension[]:	(15.0, 15.0, 15.0, 15.0)	// front mirror
+	mirror_fov_extension[]:	(15.0, 15.0, 15.0, 15.0)	// front2 mirror
+}
+
+}
