@@ -21,8 +21,8 @@ game_data : .game.data {
 	mirror_fov[]:		13.0f 	// far mirror
 	mirror_fov[]:		45.0f 	// far small mirror
 	mirror_fov[]:		60.0f 	// side mirror
-	mirror_fov[]:		60.0f 	// front mirror
-	mirror_fov[]:		60.0f 	// front2 mirror
+	mirror_fov[]:		100.0f 	// front mirror
+	mirror_fov[]:		100.0f 	// front2 mirror
 
 	tiny_garages[]: 	prefab.poor_garage
 	tiny_garages[]: 	prefab.279
