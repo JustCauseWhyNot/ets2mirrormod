@@ -1,8 +1,14 @@
 SiiNunit
 {
 mirror_data : .mirror.data {
-
-	# sizes of mirrors in meters (width, height) - Based on real truck specifications
+	# sizes of mirrors in meters (width, height)
+	# XTX NOTES IN ALL CAPS.
+	# ADJUSTING THE NUMBERS IN THIS FILE CAN WORK OUT THAT SKEWED/STRETCHED DISTORTED LOOK IN THE MIRRORS.
+	# THE ACTUAL SIZE OF "MOST" AMERICAN TRUCK MIRRORS IS 7x16 INCHES (MODELED BY SCS ON THE W900). WHICH SHOULD HAVE THESE MIRROR NUMBERS AT (0.178, 0.406) WHEN ITS CONVERTED TO METERS.
+	# DEFAULT WAS (0.2, 0.4).
+	# THIS WILL HOWEVER REDUCE YOUR HORIZONTAL VIEW ANGLE IN THE MIRROR.
+	# ITS POSSIBLE FACTORY AREODYNE MIRRORS ARE A DIFFERENT SIZE (THAN 7 X 16 INCHES) AND THIS MAY NOT REMOVE A SKEWED LOOK.
+	# THE 8 INCH CONVEX MIRROR SIZE (MODELED BY SCS ON THE W900) AT (0.2, 0.2) CAN BE CORRECT SINCE MANY TRUCKS HAVE THESE. THOUGH 7-7 1/2 INCHES I FOUND TO BE MORE COMMON IN MY CAREER.
 
 	mirror_size[]:		(0.178, 0.406)	// close mirror
 	mirror_size[]:		(0.2, 0.2)		// close small mirror
@@ -12,8 +18,11 @@ mirror_data : .mirror.data {
 	mirror_size[]:		(0.2, 0.2)		// front mirror
 	mirror_size[]:		(0.2, 0.2)		// front2 mirror
 
-	# angles in degrees that control mirror's FOV (left, right, bottom, top)
-	# Realistic values based on actual truck mirror behavior
+	# angles in degrees that control how much does mirror extend its FOV
+	# on individual sides (left, right, bottom, top)
+	# DUE TO ACTUAL MIRROR SIZE (ABOVE) HAVING A 44:100 RATIO, THE HORIZONTAL VIEW SHOULD BE EQUAL TO 44% OF THE VERTICAL IN ORDER TO REMOVE THE STRETCHED IMAGE FROM MIRRORS.
+	# mirror_fov_extension[]:	(4.4, 4.4, 5.0, 15.0) I WAS TRYING TO CHANGE THE VERTICAL VIEW WITH THIS TO PREVENT CRANKING THE MIRRORS WAY UP/DOWN, BUT IT DOESN'T SEEM TO W0RK THAT WAY...
+	# THE POPULAR K100E MAIN MIRRORS FOR EXAMPLE, SEEMS TO BE LOOKING DOWN BY DEFAULT MORE THAN OTHER MIRRORS ON TRUCKS. CRANKING THEM WAY UP MAKES THE ENVIRONMENT LOOK TWISTED IN THE MIRROR.
 
 	mirror_fov_extension[]:	(4.4, 4.4, 10.0, 10.0)		// close mirror
 	mirror_fov_extension[]:	(20.0, 20.0, 20.0, 20.0)	// close small mirror
